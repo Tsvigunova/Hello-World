@@ -28,17 +28,18 @@ body{
 	color: #2b2b2b;
 }
 
-.main__item {
-    margin: 1em;
-    width: 15em;
-    display: block;
+.create_form{
+	display: flex;
+	flex-direction: column;
 }
 
-.main__items{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 2em auto;
+.create_form label{
+	padding: 5px;
+}
+
+.create_form input{
+	padding: 5px;
+	margin-bottom: 2em;
 }
 
 
