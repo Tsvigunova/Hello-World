@@ -42,6 +42,19 @@ body{
 	margin-bottom: 2em;
 }
 
+.create__text{
+	display: block;
+}
+
+.create__text_original,
+.create__text_translate{
+	min-height: 10em;
+}
+
+.create_form-submit{
+	width: 10em;
+}
+
 
 
 

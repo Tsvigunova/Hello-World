@@ -32,18 +32,25 @@
 
                         <label for="name_of_song">Name of Song</label>
 						<input required class="create__name_of_song" type="text" name="name_of_song" id="name_of_song">
-
-                        <label for="text_original">Original text of Song</label>
-						<input required class="create__text_original" type="text" name="text_original" id="text_original">
-
-                        <label for="text_translate">Translate of song</label>
-						<input required class="create__text_translate" type="text" name="text_translate" id="text_translate">
+                        
+                        <div class="create__text">
+                            <div class="create__text-left" >
+                                <p>Original text of Song</p>
+						        <textarea class="create__text_original" name="text_original" id="text_original"></textarea>
+                            </div>
+                            <div class="create__text-right">
+                                <p>Translate of song</p>
+						        <textarea class="create__text_translate" name="text_translate" id="text_translate"></textarea>
+                            </div>
+                        </div>
 
                         <label for="image_for_song">Input image</label>
-						<input required class="create__image" type="image" name="image_for_song" id="image_for_song">
+						<input required class="create__image" type="file" name="image_for_song" id="image_for_song" accept="image/*">
 
                         <label for="youtube_link">Video in Youtube</label>
-						<input required class="create__youtube" type="url" name="youtube_link" id="youtube_link">
+						<input required class="create__youtube" type="text" name="youtube_link" id="youtube_link">
+
+                        <button class="create_form-submit" type="submit">Send</button>
                     </form>
                 </div>
             </section>
