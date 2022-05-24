@@ -28,32 +28,7 @@ body{
 	color: #2b2b2b;
 }
 
-.create_form{
-	display: flex;
-	flex-direction: column;
-}
 
-.create_form label{
-	padding: 5px;
-}
-
-.create_form input{
-	padding: 5px;
-	margin-bottom: 2em;
-}
-
-.create__text{
-	display: block;
-}
-
-.create__text_original,
-.create__text_translate{
-	min-height: 10em;
-}
-
-.create_form-submit{
-	width: 10em;
-}
 
 
 

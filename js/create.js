@@ -10,18 +10,40 @@ const localStorageKey = 'data';
 
 createFormSubmitButton.addEventListener('click', (e) => {
     e.preventDefault();
+    const author = nameOfAuthorInput.value,
+        song = nameOfSongInput.value,
+        originalText = textOriginalInput.value,
+        translateText = textTranslateInput.value,
+        image = imageForSongInput.value,
+        youtubeLink = youtubeLinkInput.value;
 
-    const data = {
-        author: nameOfAuthorInput.value,
-        song: nameOfSongInput.value,
-        originalText: textOriginalInput.value,
-        translateText: textTranslateInput.value,
-        image: imageForSongInput.files[0].name,
-        youtubeLink: youtubeLinkInput.value,
-        date: now
-    };    
+    if(author && song && originalText && translateText && image && youtubeLink) {
+        const data = {
+            author,
+            song,
+            originalText,
+            translateText,
+            image: imageForSongInput.files[0].name,
+            youtubeLink,
+            date: now
+        };    
 
-
-    localStorage.setItem(localStorageKey, JSON.stringify(data)); 
+        const dataList = JSON.parse(localStorage.getItem('data')) ?? [];
+        dataList.unshift(data);
+        localStorage.setItem(localStorageKey, JSON.stringify(dataList)); 
+    } else {
+        alert("error");
+    }
+    
+    clearInputs();
 });
+
+const clearInputs = () => {
+    nameOfAuthorInput.value = '';
+    nameOfSongInput.value = '';
+    textOriginalInput.value = '';
+    textTranslateInput.value = '';
+    imageForSongInput.value = '';
+    youtubeLinkInput.value = '';
+};
 
