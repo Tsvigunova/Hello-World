@@ -7,6 +7,7 @@ let youtubeLinkInput = document.getElementById('youtube_link');
 const createFormSubmitButton = document.querySelector('.create_form-submit');
 const now = new Date().toLocaleDateString(); 
 const localStorageKey = 'data';
+const error = document.querySelector('.error');
 
 createFormSubmitButton.addEventListener('click', (e) => {
     e.preventDefault();
@@ -16,6 +17,8 @@ createFormSubmitButton.addEventListener('click', (e) => {
         translateText = textTranslateInput.value,
         image = imageForSongInput.value,
         youtubeLink = youtubeLinkInput.value;
+
+    error.innerHTML = '';
 
     if(author && song && originalText && translateText && image && youtubeLink) {
         const data = {
@@ -32,7 +35,7 @@ createFormSubmitButton.addEventListener('click', (e) => {
         dataList.unshift(data);
         localStorage.setItem(localStorageKey, JSON.stringify(dataList)); 
     } else {
-        alert("error");
+        error.innerHTML = 'Error';
     }
     
     clearInputs();
