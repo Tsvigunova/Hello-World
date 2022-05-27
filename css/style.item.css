@@ -21,39 +21,31 @@ li{
 }
 
 body{
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Mulish', sans-serif;
 	font-weight: 400;
-	font-size: 20px;
-	line-height: 32px;
+	font-size: 16px;
+	line-height: 20px;
 	color: #2b2b2b;
 }
 
-.create_form{
+.header__inner{
 	display: flex;
-	flex-direction: column;
+	justify-content: space-between;
 }
 
-.create_form label{
-	padding: 5px;
-}
-
-.create_form input{
-	padding: 5px;
-	margin-bottom: 2em;
-}
-
-.create__text{
+.item__inner{
 	display: block;
 }
 
-.create__text_original,
-.create__text_translate{
-	min-height: 10em;
+.item__media-image{
+	width: 80%;
+	position: top center;
 }
 
-.create_form-submit{
-	width: 10em;
+.item__title{
+	margin-top: 2em;
 }
+
 
 
 

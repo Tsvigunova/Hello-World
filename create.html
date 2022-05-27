@@ -6,7 +6,7 @@
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Create</title>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.create.css">
     </head>
     <body>
@@ -25,30 +25,30 @@
 
             <section class="create">
                 <div class="create__inner">
-                    <h1 class="craeate__inner-title">Create</h1>
+                    <h1 class="craeate__inner-title">Create a translation</h1>
                     <form class="create_form">
-                        <label for="name_of_author">Author</label>
-						<input required class="create__name_of_author" type="text" name="name_of_author" id="name_of_author">
+                        <label for="name_of_author">Author<span>*</span></label>
+						<input required class="create__name_of_author input" type="text" name="name_of_author" id="name_of_author">
 
-                        <label for="name_of_song">Name of Song</label>
-						<input required class="create__name_of_song" type="text" name="name_of_song" id="name_of_song">
+                        <label for="name_of_song">Name of Song<span>*</span></label>
+						<input required class="create__name_of_song input" type="text" name="name_of_song" id="name_of_song">
                         
                         <div class="create__text">
                             <div class="create__text-left" >
-                                <p>Original text of Song</p>
-						        <textarea class="create__text_original" name="text_original" id="text_original"></textarea>
+                                <p>Original text of Song<span>*</span></p>
+						        <textarea class="create__text_original input" name="text_original" id="text_original"></textarea>
                             </div>
                             <div class="create__text-right">
-                                <p>Translate of song</p>
-						        <textarea class="create__text_translate" name="text_translate" id="text_translate"></textarea>
+                                <p>Translate of song<span>*</span></p>
+						        <textarea class="create__text_translate input" name="text_translate" id="text_translate"></textarea>
                             </div>
                         </div>
 
                         <label for="image_for_song">Input image</label>
-						<input required class="create__image" type="file" name="image_for_song" id="image_for_song" accept="image/*">
+						<input class="create__image" type="file" name="image_for_song" id="image_for_song" accept="image/*">
 
                         <label for="youtube_link">Video in Youtube</label>
-						<input required class="create__youtube" type="text" name="youtube_link" id="youtube_link">
+						<input class="create__youtube input" type="text" name="youtube_link" id="youtube_link">
 
                         <div class="error"></div>
 

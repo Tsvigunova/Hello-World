@@ -35,7 +35,7 @@ createFormSubmitButton.addEventListener('click', (e) => {
         dataList.unshift(data);
         localStorage.setItem(localStorageKey, JSON.stringify(dataList)); 
     } else {
-        error.innerHTML = 'Error';
+        error.innerHTML = 'All fields are required';
     }
     
     clearInputs();
