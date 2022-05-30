@@ -25,7 +25,7 @@ body{
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 20px;
-	color: #2b2b2b;
+	color: #333333;
 }
 
 .header__inner{
@@ -37,14 +37,48 @@ body{
 	display: block;
 }
 
-.item__media-image{
-	width: 80%;
-	position: top center;
+.item__media-image {
+	display: flex;
+	justify-content: center;
+}
+
+.item-image{
+	margin-top: 3em;
+	width: 70%;
+	height: 22em;
+	object-fit: cover;
+}
+
+.item__textarea{
+	text-align: center;
 }
 
 .item__title{
-	margin-top: 2em;
+	margin-top: 3em;
+	font-family: 'Mulish';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 28px;
 }
+
+.item__text{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 3em;
+}
+
+.text_original-left{
+	margin-right: 10em;
+	text-align: left;
+}
+
+.text_translate-right{
+	text-align: left;
+}
+
+
 
 
 

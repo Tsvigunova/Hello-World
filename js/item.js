@@ -10,11 +10,11 @@ const itemInner = document.querySelector('.item__inner');
 const pageItem = () => {
     itemInner.innerHTML = `
         <div class="item__media">
-            <div id="test">
-                
+            <div class="item__media-image">
+                <img src="D:\\Programming\\Hello World!\\img\\${item.image}" class="item-image">
             </div>
             <div class="item__media-video">
-                ${item.youtubeLink}
+                <div id="player"></div>
             </div>
         </div>
         <div class="item__textarea">
@@ -26,10 +26,29 @@ const pageItem = () => {
         </div>
     `;
 
-    const test = document.body;
-    
-    test.style.background = `url('img/${item.image}') no-repeat top center`;
-    test.style.backgroundSize = '60%';
+    inItPlayer();
+};
+
+const inItPlayer = () => {
+    const tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    const firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    const v = new URL(item.youtubeLink).searchParams.get('v');
+
+    let player;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            height: '390',
+            width: '640',
+            videoId: v,
+            playerVars: {
+            'playsinline': 1
+            }
+        });
+    }
 };
 
 pageItem();
