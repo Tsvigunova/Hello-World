@@ -49,8 +49,21 @@ body{
 	object-fit: cover;
 }
 
+.item__media-video{
+	display: flex;
+	justify-content: center;
+}
+
+#player{
+	width: 24m;
+	height: 20em;
+	position: absolute;
+	top: 17em;
+}
+
 .item__textarea{
 	text-align: center;
+	margin-top: 12em;
 }
 
 .item__title{
@@ -69,21 +82,11 @@ body{
 	margin-top: 3em;
 }
 
-.text_original-left{
-	margin-right: 10em;
+.text-original, .text-translate {
+	width: 50%;
 	text-align: left;
+	padding: 2em;
 }
-
-.text_translate-right{
-	text-align: left;
-}
-
-
-
-
-
-
-
 
 .footer__inner{
     margin-top: 5em;

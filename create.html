@@ -13,10 +13,10 @@
         <div class="container">
             <header class="header">
                 <div class="header__inner">
-                    <a href="index.html" class="header_logo">
+                    <a href="index.html" class="header-logo">
                         Hiiiiiii main!
                     </a>
-                    <a href="create.html" class="header_logo">
+                    <a href="create.html" class="header-logo">
                         Create it!
                     </a>
 
@@ -26,7 +26,7 @@
             <section class="create">
                 <div class="create__inner">
                     <h1 class="craeate__inner-title">Create a translation</h1>
-                    <form class="create_form">
+                    <form class="create__form">
                         <label for="name_of_author">Author<span>*</span></label>
 						<input required class="create__name_of_author input" type="text" name="name_of_author" id="name_of_author">
 
@@ -36,23 +36,23 @@
                         <div class="create__text">
                             <div class="create__text-left" >
                                 <p>Original text of Song<span>*</span></p>
-						        <textarea class="create__text_original input" name="text_original" id="text_original"></textarea>
+						        <textarea required class="create__text-original input" name="text-original" id="text-original"></textarea>
                             </div>
                             <div class="create__text-right">
                                 <p>Translate of song<span>*</span></p>
-						        <textarea class="create__text_translate input" name="text_translate" id="text_translate"></textarea>
+						        <textarea required class="create__text-translate input" name="text-translate" id="text-translate"></textarea>
                             </div>
                         </div>
 
                         <label for="image_for_song">Input image</label>
 						<input class="create__image" type="file" name="image_for_song" id="image_for_song" accept="image/*">
 
-                        <label for="youtube_link">Video in Youtube</label>
-						<input class="create__youtube input" type="text" name="youtube_link" id="youtube_link">
+                        <label for="youtube__link">Video in Youtube</label>
+						<input class="create__youtube input" type="text" name="youtube__link" id="youtube__link">
 
                         <div class="error"></div>
 
-                        <button class="create_form-submit" type="submit">Send</button>
+                        <button class="create__form-submit" type="submit">Send</button>
                     </form>
                 </div>
             </section>

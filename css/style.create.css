@@ -87,11 +87,11 @@ body{
 	height: 10em;
 }
 
-.create_form span{
+.create__form span{
 	color: red;
 }
 
-.create_form-submit{
+.create__form-submit{
 	width: 40%;
 	margin-top: 2em;
 	padding: 0.5em;
@@ -106,7 +106,7 @@ body{
 	border-radius: 0.3em;
 }
 
-.create_form-submit:hover{
+.create__form-submit:hover{
 	background: #333333;
 	color: white;
 }

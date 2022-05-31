@@ -1,41 +1,41 @@
 let nameOfAuthorInput = document.getElementById('name_of_author');
 let nameOfSongInput = document.getElementById('name_of_song');
-let textOriginalInput = document.getElementById('text_original');
-let textTranslateInput = document.getElementById('text_translate');
+let textOriginalInput = document.getElementById('text-original');
+let textTranslateInput = document.getElementById('text-translate');
 let imageForSongInput = document.getElementById('image_for_song');
-let youtubeLinkInput = document.getElementById('youtube_link');
-const createFormSubmitButton = document.querySelector('.create_form-submit');
-const now = new Date().toLocaleDateString(); 
+let youtubeLinkInput = document.getElementById('youtube__link');
+const createFormSubmitButton = document.querySelector('.create__form-submit');
 const localStorageKey = 'data';
 const error = document.querySelector('.error');
 
 createFormSubmitButton.addEventListener('click', (e) => {
     e.preventDefault();
-    const author = nameOfAuthorInput.value,
-        song = nameOfSongInput.value,
-        originalText = textOriginalInput.value,
-        translateText = textTranslateInput.value,
-        image = imageForSongInput.value,
-        youtubeLink = youtubeLinkInput.value;
+    const now = new Date().toLocaleDateString(); 
+    const author = nameOfAuthorInput.value;
+    const song = nameOfSongInput.value;
+    const originalText = textOriginalInput.value;
+    const translateText = textTranslateInput.value;
+    const youtubeLink = youtubeLinkInput.value;
 
     error.innerHTML = '';
 
-    if(author && song && originalText && translateText && image && youtubeLink) {
+    if (author && song && originalText && translateText) {
         const data = {
             author,
             song,
             originalText,
             translateText,
-            image: imageForSongInput.files[0].name,
+            image: imageForSongInput.files.length ? imageForSongInput.files[0].name : '',
             youtubeLink,
             date: now
-        };    
+        };
 
         const dataList = JSON.parse(localStorage.getItem('data')) ?? [];
         dataList.unshift(data);
+        
         localStorage.setItem(localStorageKey, JSON.stringify(dataList)); 
     } else {
-        error.innerHTML = 'All fields are required';
+        error.innerHTML = 'Fill in all required fields';
     }
     
     clearInputs();

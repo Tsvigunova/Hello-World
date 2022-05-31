@@ -2,10 +2,9 @@ const data = JSON.parse(localStorage.getItem('data')) ?? [];
 const mainItemsList = document.querySelector('.main__items');
 
 const generateList = () => {
-    mainItemsList.innerHTML = "";
+    mainItemsList.innerHTML = '';
 
     data.forEach((item, i) => {
-        
 	    mainItemsList.innerHTML += `
             <div class="main__item">
                 <div class="main__inner">
