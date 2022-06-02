@@ -77,16 +77,27 @@ body{
 
 .item__text{
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: end;
 	margin-top: 3em;
+}
+
+.text-item{
+	display: flex;
+	flex-direction: row;
+}
+
+.text-item:hover {
+	background-color: rgba(0, 0, 0, 0.050);
 }
 
 .text-original, .text-translate {
 	width: 50%;
 	text-align: left;
-	padding: 2em;
+	padding: 0.3em;
 }
+
+
 
 .footer__inner{
     margin-top: 5em;

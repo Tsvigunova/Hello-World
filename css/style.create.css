@@ -51,13 +51,13 @@ body{
 	color: #333333;
 }
 
-.create_form{
+.create__form{
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 }
 
-.create_form label,
+.create__form label,
 .create__text p{
 	margin: 0;
 	margin-top: 1em;

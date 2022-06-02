@@ -11,13 +11,21 @@ const itemInner = document.querySelector('.item__inner');
 const pageItem = () => {
     const itemImage = document.querySelector('.item__media-image');
     const itemTitle = document.querySelector('.item__title');
-    const textOriginal = document.querySelector('.text-original');
-    const textTranslate = document.querySelector('.text-translate');
+    const itemText = document.querySelector('.item__text');
+    const textOriginalArray = item.originalText.split(/\r?\n/);
+    const textTranslateArray = item.translateText.split(/\r?\n/);
+
+    textOriginalArray.forEach((line, i) => {
+        itemText.innerHTML += `
+        <div class="text-item">
+            <div class="text-original">${textOriginalArray[i]}</div>
+            <div class="text-translate">${textTranslateArray[i]}</div>
+        </div>
+    `;
+    });
 
     itemImage.innerHTML = `<img src="D:\\Programming\\Hello World!\\img\\${item.image}" class="item-image">`;
     itemTitle.innerHTML = `${item.author} - ${item.song}`;
-    textOriginal.innerHTML = `${item.originalText}`;
-    textTranslate.innerHTML = `${item.translateText}`; 
 };
 
 function loadVideoScript() {

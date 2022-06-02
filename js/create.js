@@ -50,3 +50,4 @@ const clearInputs = () => {
     youtubeLinkInput.value = '';
 };
 
+

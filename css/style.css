@@ -37,20 +37,26 @@ body{
 
 .main__items{
     display: flex;
-    margin: 2em auto;
+    margin: 3em auto;
 	flex-wrap: wrap;
 }
 
 .main__item {
     display: block;
 	width: 33%;
-	margin: 1em 0;
 }
 
 .main__item-image{
 	object-fit: cover;
 	width: 12em;
 	height: 8em;
+}
+
+.main__inner{
+	margin: 0;
+	padding: 2em;
+	display: flex;
+	justify-content: center;
 }
 
 
